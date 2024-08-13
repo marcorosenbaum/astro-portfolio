@@ -1,7 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TypewriterText from '../components/TypewriterText/TypewriterText';
-import photoMarco from '../assets/images/photo-marco-w450.png';
+import photoMarco450 from '../assets/images/photo-marco-w450.png';
+import photoMarco600 from '../assets/images/photo-marco-w600.png';
+import photoMarco750 from '../assets/images/photo-marco-w750.png';
+import photoMarco900 from '../assets/images/photo-marco-w900.png';
+import photoMarco1150 from '../assets/images/photo-marco-w1150.png';
+import photoMarco1400 from '../assets/images/photo-marco-w1400.png';
+import photoMarco1700 from '../assets/images/photo-marco-w1700.png';
+import photoMarco2000 from '../assets/images/photo-marco-w2000.png';
+import photoMarco from '../assets/images/photo-marco.png';
+
 import ChevronDown from '@/components/ChevronDown';
 const pageTitle = 'Home Page';
 ---
@@ -25,11 +34,20 @@ const pageTitle = 'Home Page';
         </h1>
       </div>
       <div class="max-h-[50vh] md:max-w-[50vw] md:max-h-[80vh]">
-        <!-- image causes high performance decrease -->
         <img
           class="mx-auto text-center h-full object-contain"
-          src={photoMarco.src}
-          alt="Marco Rosenbaum"
+          src={photoMarco450.src}
+          srcset={`
+            ${photoMarco.src} 4000w,
+            ${photoMarco1700.src} 3500w,
+            ${photoMarco1400.src} 3000w,
+            ${photoMarco1150.src} 2600w,
+            ${photoMarco900.src} 2000w,
+            ${photoMarco750.src} 1500w,
+            ${photoMarco600.src} 1200w,
+            ${photoMarco450.src} 900w
+          `}
+          alt="Photo of Marco Rosenbaum"
           loading="lazy"
         />
       </div>
@@ -39,7 +57,7 @@ const pageTitle = 'Home Page';
   </section>
   <section class="min-h-screen flex flex-col justify-around py-16">
     <h1 class="text-4xl text-center">
-      Keep simple things simple and make progress.
+      Keep simple things simple and focus on making progress.
     </h1>
     <div
       class="flex flex-col sm:flex-row items-center justify-around flex-wrap gap-12"
