@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = 'Blog Page';
+const allPosts = await Astro.glob('./posts/*.md');
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <p>This is where I will list my projects.</p><p>new p</p>
+</BaseLayout>

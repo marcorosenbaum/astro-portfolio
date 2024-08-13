@@ -1,5 +1,5 @@
 /* nav styles */
-.hamburger {
+/* .hamburger {
   padding-right: 20px;
   cursor: pointer;
 }
@@ -64,5 +64,103 @@ a:focus {
 
   .dark .nav-links a {
     color: #fff;
+  }
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=League+Spartan:wght@100..900&family=Montserrat&family=Oswald&family=Quicksand:wght@300;400;500&family=Roboto&family=Roboto+Mono&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+body {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: linear-gradient(
+    309deg,
+    rgb(92, 122, 167) 0%,
+    rgb(255, 255, 255) 45%,
+    rgb(82, 112, 157) 100%
+  );
+  min-height: 100vh;
+  padding: 0rem 1rem;
+}
+
+html.dark {
+  background: linear-gradient(
+    299deg,
+    rgba(11, 14, 19, 1) 0%,
+    rgba(58, 77, 105, 1) 48%,
+    rgba(11, 14, 19, 1) 100%
+  );
+  color: white;
+}
+html #moon-icon {
+  display: none;
+}
+
+html.dark #sun-icon {
+  display: none;
+}
+
+html.dark #moon-icon {
+  display: block;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-family: "League Spartan";
+  font-style: normal;
+  font-weight: 400;
+  /* line-height: 4rem; */
+}
+
+@media screen and (min-width: 636px) {
+  html {
+    padding: 0rem 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    padding: 0rem 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    padding: 0rem 4rem;
+  }
+}
+
+/* fly in animation */
+.fly-in {
+  opacity: 0;
+  animation: flyIn 0.5s forwards;
+}
+
+@keyframes flyIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

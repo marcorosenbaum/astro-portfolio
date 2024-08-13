@@ -1,8 +1,15 @@
 ---
+import { User2, House, FolderOpen, FileText } from 'lucide-react';
+import Menu from './Menu';
 ---
-<div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/blog">Blog</a>
-    <a href="/tags/">Tags</a>
+
+<div class="">
+  <div class="gap-6 hidden md:!flex">
+    <a href="/" class="flex gap-2"><House />Home</a>
+    <a href="/about" class="flex gap-2"><User2 /> About</a>
+    <a href="/blog" class="flex gap-2"><FileText />Blog</a>
+    <a href="/tags/" class="flex gap-2">Tags</a>
+    <a href="/projects" class="flex gap-2"><FolderOpen />Projects</a>
   </div>
+  <Menu client:only />
+</div>

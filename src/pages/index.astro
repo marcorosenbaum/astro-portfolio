@@ -1,7 +1,41 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Home Page";
+import TypewriterText from '../components/TypewriterText/TypewriterText';
+import photoMarco from '../assets/images/photo-marco.png';
+import ChevronDown from '@/components/ChevronDown';
+const pageTitle = 'Home Page';
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
+  <section class="flex flex-col h-screen pt-16 gap-12 justify-between">
+    <div class="flex flex-col flex-grow md:flex-row justify-around">
+      <div
+        class="md:w-1/2 text-5xl flex flex-col justify-center flex-grow gap-12"
+      >
+        <h1>
+          I'm Marco,
+          <br />
+          <TypewriterText
+            client:load
+            words={['a Web Developer.', 'a Team Player.', 'an Optimist.']}
+          />
+        </h1>
+        <h1 class="text-accent-color">
+          Turning Vision into Reality with Code.
+        </h1>
+      </div>
+      <div class="max-h-[50vh] md:max-w-[50vw] md:max-h-[80vh]">
+        <!-- image causes high performance decrease -->
+        <img
+          class="mx-auto text-center h-full object-contain"
+          src={photoMarco.src}
+          alt="Marco Rosenbaum"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <ChevronDown client:only />
+  </section>
+  <section class="min-h-screen"></section>
 </BaseLayout>
