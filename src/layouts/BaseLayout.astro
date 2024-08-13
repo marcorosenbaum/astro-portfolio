@@ -1,8 +1,9 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import SideBar from '@/components/SideBar.astro';
 import '../styles/global.css';
-import Greeting from '../components/Greeting';
+
 const { pageTitle } = Astro.props;
 ---
 
@@ -16,10 +17,8 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
+    <SideBar />
     <slot />
     <Footer />
-    <script>
-      import '../scripts/menu.js';
-    </script>
   </body>
 </html>

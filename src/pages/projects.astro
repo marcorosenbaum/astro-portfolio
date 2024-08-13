@@ -1,10 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = 'Blog Page';
-const allPosts = await Astro.glob('./posts/*.md');
+const pageTitle = 'Projects Page';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p>This is where I will list my projects.</p><p>new p</p>
+  <section
+    class="min-h-screen flex flex-col items-center justify-center gap-12 py-16"
+  >
+    <h1 class="text-4xl">Projects</h1>
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+      <div class="rounded-xl w-60 h-60 bg-blue-200">Project 1</div>
+      <div class="rounded-xl w-60 h-60 bg-blue-200">Project 2</div>
+      <div class="rounded-xl w-60 h-60 bg-blue-200">Project 3</div>
+      <div class="rounded-xl w-60 h-60 bg-blue-200">Project 4</div>
+      <div class="rounded-xl w-60 h-60 bg-blue-200">Project 5</div>
+      <div class="rounded-xl w-60 h-60 bg-blue-200">Project 6</div>
+    </div>
+  </section>
 </BaseLayout>
