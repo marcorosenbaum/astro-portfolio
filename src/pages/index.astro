@@ -1,15 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TypewriterText from '../components/TypewriterText/TypewriterText';
-import photoMarco450 from '../assets/images/photo-marco-w450.png';
-import photoMarco600 from '../assets/images/photo-marco-w600.png';
-import photoMarco750 from '../assets/images/photo-marco-w750.png';
-import photoMarco900 from '../assets/images/photo-marco-w900.png';
-import photoMarco1150 from '../assets/images/photo-marco-w1150.png';
-import photoMarco1400 from '../assets/images/photo-marco-w1400.png';
-import photoMarco1700 from '../assets/images/photo-marco-w1700.png';
-import photoMarco2000 from '../assets/images/photo-marco-w2000.png';
-import photoMarco from '../assets/images/photo-marco.png';
+import photoMarco450 from '../assets/images/marco/photo-marco-w450.png';
+import photoMarco600 from '../assets/images/marco/photo-marco-w600.png';
+import photoMarco750 from '../assets/images/marco/photo-marco-w750.png';
+import photoMarco900 from '../assets/images/marco/photo-marco-w900.png';
+import photoMarco1150 from '../assets/images/marco/photo-marco-w1150.png';
+import photoMarco1400 from '../assets/images/marco/photo-marco-w1400.png';
+import photoMarco1700 from '../assets/images/marco/photo-marco-w1700.png';
+import photoMarco2000 from '../assets/images/marco/photo-marco-w2000.png';
+import photoMarco from '../assets/images/marco/photo-marco.png';
 
 import ChevronDown from '@/components/ChevronDown';
 const pageTitle = 'Home Page';
@@ -38,7 +38,8 @@ const pageTitle = 'Home Page';
           class="mx-auto text-center h-full object-contain"
           src={photoMarco450.src}
           srcset={`
-            ${photoMarco.src} 4000w,
+            ${photoMarco.src} 5000w,
+            ${photoMarco2000.src} 4000w,
             ${photoMarco1700.src} 3500w,
             ${photoMarco1400.src} 3000w,
             ${photoMarco1150.src} 2600w,
