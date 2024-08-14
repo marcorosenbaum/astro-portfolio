@@ -117,7 +117,7 @@ html.dark #moon-icon {
 }
 
 html {
-  font-size: 16px;
+  font-size: 8px;
 }
 
 /* h1 {
@@ -127,21 +127,36 @@ html {
 
 } */
 
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
 @media screen and (min-width: 636px) {
   html {
     padding: 0rem 2rem;
+    font-size: 10px;
   }
 }
 
 @media screen and (min-width: 768px) {
   html {
     padding: 0rem 3rem;
+    font-size: 13px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   html {
     padding: 0rem 4rem;
+    font-size: 16px;
   }
 }
 

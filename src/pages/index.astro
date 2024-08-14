@@ -18,9 +18,7 @@ const pageTitle = 'Home Page';
 <BaseLayout pageTitle={pageTitle}>
   <section class="flex flex-col h-screen pt-16 gap-12 justify-between">
     <div class="flex flex-col flex-grow md:flex-row justify-around">
-      <div
-        class="md:w-1/2 text-5xl flex flex-col justify-center flex-grow gap-12"
-      >
+      <div class="md:w-1/2 flex flex-col justify-center flex-grow gap-12">
         <h1>
           I'm Marco,
           <br />
@@ -36,18 +34,20 @@ const pageTitle = 'Home Page';
       <div class="max-h-[50vh] md:max-w-[50vw] md:max-h-[80vh]">
         <img
           class="mx-auto text-center h-full object-contain"
-          src={photoMarco450.src}
           srcset={`
-            ${photoMarco.src} 5000w,
-            ${photoMarco2000.src} 4000w,
-            ${photoMarco1700.src} 3500w,
-            ${photoMarco1400.src} 3000w,
-            ${photoMarco1150.src} 2600w,
-            ${photoMarco900.src} 2000w,
-            ${photoMarco750.src} 1500w,
-            ${photoMarco600.src} 1200w,
-            ${photoMarco450.src} 900w
+            ${photoMarco.src} 2500w,
+            ${photoMarco2000.src} 2000w,
+            ${photoMarco1700.src} 1700w,
+            ${photoMarco1400.src} 1400w,
+            ${photoMarco1150.src} 11500w,
+            ${photoMarco900.src} 900w,
+            ${photoMarco750.src} 750w,
+            ${photoMarco600.src} 600w,
+            ${photoMarco450.src} 450w
           `}
+          sizes="
+          (max-width: 767px) 100vw, 
+          (min-width: 768px) 50vw"
           alt="Photo of Marco Rosenbaum"
           loading="lazy"
         />

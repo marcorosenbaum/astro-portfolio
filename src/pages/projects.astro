@@ -8,41 +8,79 @@ const pageTitle = 'Projects Page';
 
 <BaseLayout pageTitle={pageTitle}>
   <section
-    class="min-h-screen flex flex-col items-center justify-center gap-12 py-16"
+    class="min-h-screen flex flex-col items-center justify-center gap-12 py-32"
   >
-    <h1 class="text-4xl">Projects</h1>
+    <!-- <h1 class="text-4xl">Projects</h1> -->
     <div class="grid gap-x-20 gap-y-40">
       {
         PROJECTS.map((project, index) => (
-          <div class="col-span-1 lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {index % 2 === 0 ? (
-              <>
-                <img
-                  src={project.image.src}
-                  alt={project.title}
-                  loading="lazy"
-                  class="rounded-xl border border-accent-color"
-                />
-                <div>
-                  <h2>{project.title}</h2>
-                  <p>{project.descriptionLong}</p>
-                </div>
-              </>
-            ) : (
-              <>
-                <div>
-                  <h2>{project.title}</h2>
-                  <p>{project.descriptionLong}</p>
-                </div>
-                <img
-                  src={project.image.src}
-                  alt={project.title}
-                  loading="lazy"
-                  class="rounded-xl border border-accent-color"
-                />
-              </>
-            )}
-          </div>
+          <>
+            <div class="grid col-span-1 lg:col-span-2  grid-cols-1 lg:grid-cols-2 gap-12">
+              {index % 2 === 0 ? (
+                <>
+                  <img
+                    alt={project.title}
+                    loading="lazy"
+                    class="rounded-xl border border-accent-color"
+                    srcset={`
+                    ${project.image.width400.src} 400w,
+                    ${project.image.width600.src} 600w,
+                    ${project.image.width800.src} 800w,
+                    ${project.image.width1000.src} 1000w,
+                    ${project.image.width1200.src} 1200w,
+                    ${project.image.width1600.src} 1600w,
+                    ${project.image.width2000.src} 2000w,
+                    `}
+                    sizes="
+                    (max-width: 1023px) 100vw, 
+                    (min-width: 1024px) 50vw"
+                  />
+                  <div class="flex flex-col gap-4">
+                    <h2>{project.title}</h2>
+                    <p>{project.descriptionLong}</p>
+                    <div>
+                      {project.skills.map((skill) => (
+                        <span class="bg-accent-color text-black px-2 py-1 rounded-full text-sm mr-2">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div class="order-last lg:order-first flex flex-col gap-4">
+                    <h2>{project.title}</h2>
+                    <p>{project.descriptionLong}</p>
+                    <div>
+                      {project.skills.map((skill) => (
+                        <span class="bg-accent-color text-black px-2 py-1 rounded-full text-sm mr-2">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <img
+                    alt={project.title}
+                    loading="lazy"
+                    class="rounded-xl border border-accent-color"
+                    srcset={`
+                    ${project.image.width400.src} 400w,
+                    ${project.image.width600.src} 600w,
+                    ${project.image.width800.src} 800w,
+                    ${project.image.width1000.src} 1000w,
+                    ${project.image.width1200.src} 1200w,
+                    ${project.image.width1600.src} 1600w,
+                    ${project.image.width2000.src} 2000w,
+                    `}
+                    sizes="
+                    (max-width: 1023px) 100vw, 
+                    (min-width: 1024px) 50vw"
+                  />
+                </>
+              )}
+            </div>
+          </>
         ))
       }
     </div>
