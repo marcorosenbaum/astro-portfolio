@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
+import WebsiteLink from '../components/WebsiteLink.astro';
+import GithubLink from '../components/GithubLink.astro';
 import PROJECTS from '../assets/projects';
 
 const pageTitle = 'Projects Page';
@@ -10,7 +11,6 @@ const pageTitle = 'Projects Page';
   <section
     class="min-h-screen flex flex-col items-center justify-center gap-12 py-32"
   >
-    <!-- <h1 class="text-4xl">Projects</h1> -->
     <div class="grid gap-x-20 gap-y-40">
       {
         PROJECTS.map((project, index) => (
@@ -21,7 +21,7 @@ const pageTitle = 'Projects Page';
                   <img
                     alt={project.title}
                     loading="lazy"
-                    class="rounded-xl border border-accent-color"
+                    class="rounded-xl border border-accent-color shadow-2xl shadow-black"
                     srcset={`
                     ${project.image.width400.src} 400w,
                     ${project.image.width600.src} 600w,
@@ -35,35 +35,51 @@ const pageTitle = 'Projects Page';
                     (max-width: 1023px) 100vw, 
                     (min-width: 1024px) 50vw"
                   />
-                  <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-8">
                     <h2>{project.title}</h2>
                     <p>{project.descriptionLong}</p>
-                    <div>
+                    <div class="flex gap-4 flex-wrap">
                       {project.skills.map((skill) => (
-                        <span class="bg-accent-color text-black px-2 py-1 rounded-full text-sm mr-2">
+                        <span class="skill border border-black bg-white text-black  px-4 py-1 rounded-full text-sm mr-2">
                           {skill}
                         </span>
                       ))}
+                    </div>
+                    <div class="flex gap-12">
+                      <GithubLink url={project.githubLink} />
+                      {project.websiteLink ? (
+                        <WebsiteLink url={project.websiteLink} />
+                      ) : (
+                        ''
+                      )}
                     </div>
                   </div>
                 </>
               ) : (
                 <>
-                  <div class="order-last lg:order-first flex flex-col gap-4">
+                  <div class="order-last lg:order-first flex flex-col gap-8">
                     <h2>{project.title}</h2>
                     <p>{project.descriptionLong}</p>
-                    <div>
+                    <div class="flex gap-4 flex-wrap">
                       {project.skills.map((skill) => (
-                        <span class="bg-accent-color text-black px-2 py-1 rounded-full text-sm mr-2">
+                        <span class="skill border border-black bg-white text-black  px-4 py-1 rounded-full text-sm mr-2">
                           {skill}
                         </span>
                       ))}
+                    </div>
+                    <div class="flex gap-12">
+                      <GithubLink url={project.githubLink} />
+                      {project.websiteLink ? (
+                        <WebsiteLink url={project.websiteLink} />
+                      ) : (
+                        ''
+                      )}
                     </div>
                   </div>
                   <img
                     alt={project.title}
                     loading="lazy"
-                    class="rounded-xl border border-accent-color"
+                    class="rounded-xl border border-accent-color shadow-2xl shadow-black"
                     srcset={`
                     ${project.image.width400.src} 400w,
                     ${project.image.width600.src} 600w,

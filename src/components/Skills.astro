@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-
+---
 import CssLogo from '../assets/logos/CssLogo';
 import TailwindLogo from '../assets/logos/TailwindLogo';
 import JavaScriptLogo from '../assets/logos/JavaScriptLogo';
@@ -9,7 +8,6 @@ import ReactLogo from '../assets/logos/ReactLogo';
 import NextLogo from '../assets/logos/NextLogo';
 import FirebaseLogo from '../assets/logos/FirebaseLogo';
 import NodeLogo from '../assets/logos/NodeLogo';
-import AstroLogo from '../assets/logos/AstroLogo';
 
 const skills = [
   { name: 'CSS', logo: CssLogo },
@@ -19,33 +17,43 @@ const skills = [
   { name: 'Node', logo: NodeLogo },
   { name: 'Vue', logo: VueLogo },
   { name: 'React', logo: ReactLogo },
-  // { name: 'Next', logo: NextLogo },
-  { name: 'Astro', logo: AstroLogo },
+  { name: 'Next', logo: NextLogo },
   { name: 'Firebase', logo: FirebaseLogo },
 ];
+---
 
-const Skills: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+<div class="flex gap-8 flex-wrap">
+  {
+    skills.map((skill, index) => (
+      <div
+        class={` flex flex-col flex-1 items-center`}
+        style={{ animationDelay: `${0.7 + index * 0.1}s` }}
+      >
+        <skill.logo />
+        <div>{skill.name}</div>
+      </div>
+    ))
+  }
+</div>
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+<style>
+  .appear {
+    opacity: 0;
+    animation: appear 0.5s forwards;
+  }
 
-  return (
-    <div className="flex gap-8 flex-wrap">
-      {skills.map((skill, index) => (
-        <div
-          key={index}
-          className={` ${
-            isVisible ? 'fly-in' : ''
-          } flex flex-col flex-1 items-center opacity-0`}
-          style={{ animationDelay: `${0 + index * 0.1}s` }}
-        >
-          <skill.logo />
-          <div>{skill.name}</div>
-        </div>
-      ))}
-    </div>
-  );
-};
-export default Skills;
+  @keyframes appear {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
