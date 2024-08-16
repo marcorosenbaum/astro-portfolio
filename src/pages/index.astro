@@ -20,7 +20,7 @@ const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
 
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
   <section class="flex flex-col h-screen pt-16 gap-12 justify-between">
-    <div class="flex flex-col flex-grow md:flex-row justify-around">
+    <div class="flex flex-col flex-grow lg:flex-row justify-around">
       <div class="flex flex-col justify-center flex-grow gap-12">
         <h1>
           I'm Marco,
@@ -34,7 +34,7 @@ const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
           Turning Vision into Reality with Code.
         </h1>
       </div>
-      <div class="max-h-[50vh] md:max-w-[35vw] md:max-h-[80vh]">
+      <div class="max-h-[50vh] lg:max-w-[35vw] lg:max-h-[80vh]">
         <img
           class="mx-auto text-center h-full object-contain"
           srcset={`
@@ -49,8 +49,8 @@ const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
             ${photoMarco450.src} 450w
           `}
           sizes="
-          (max-width: 767px) 90vw, 
-          (min-width: 768px) 35vw"
+          (max-width: 1023px) 90vw, 
+          (min-width: 1024px) 35vw"
           width="2000"
           height="1920"
           alt="Photo of Marco Rosenbaum"
