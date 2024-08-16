@@ -16,7 +16,7 @@ const pageDescription = 'Projects I have worked on';
       {
         PROJECTS.map((project, index) => (
           <>
-            <div class="grid col-span-1 lg:col-span-2  grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="grid col-span-1 md:col-span-2  grid-cols-1 md:grid-cols-2 gap-12">
               {index % 2 === 0 ? (
                 <>
                   <img
@@ -32,9 +32,9 @@ const pageDescription = 'Projects I have worked on';
                     ${project.image.width1600.src} 1600w,
                     ${project.image.width2000.src} 2000w,
                     `}
-                    sizes="
-                    (min-width: 1024px) 40vw,
-                    90vw"
+                    sizes="(max-width: 768px) 800vw, 40vw"
+                    width="1000"
+                    height="565"
                   />
                   <div class="flex flex-col gap-8">
                     <h2>{project.title}</h2>
@@ -58,7 +58,7 @@ const pageDescription = 'Projects I have worked on';
                 </>
               ) : (
                 <>
-                  <div class="order-last lg:order-first flex flex-col gap-8">
+                  <div class="order-last md:order-first flex flex-col gap-8">
                     <h2>{project.title}</h2>
                     <p>{project.descriptionLong}</p>
                     <div class="flex gap-4 flex-wrap">
@@ -90,9 +90,9 @@ const pageDescription = 'Projects I have worked on';
                     ${project.image.width1600.src} 1600w,
                     ${project.image.width2000.src} 2000w,
                     `}
-                    sizes="
-                    (min-width: 1024px) 40vw,
-                    90vw"
+                    sizes="(max-width: 768px) 80vw, 40vw"
+                    width="1000"
+                    height="565"
                   />
                 </>
               )}
