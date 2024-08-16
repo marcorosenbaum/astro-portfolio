@@ -32,45 +32,42 @@ const MenuModal: React.FC<{ closeMenu: () => void; showModal: boolean }> = ({
         showModal ? '  right-[0%]' : ' -right-[100%]'
       }`}
     >
-      <nav className="flex flex-col text-xl gap-10">
+      <nav className="flex flex-col text-xl gap-10 ">
         <button
           onClick={handleCloseMenu}
-          className="p-4 text-lg absolute top-0 right-0"
+          className="p-4 text-sm absolute top-0 right-0"
         >
+          close menu
           <X size={'2.5rem'} />
         </button>
         <a
           onClick={handleCloseMenu}
           href="/"
+          aria-label="Navigate to the home page"
           className={'flex gap-6 items-center'}
         >
           <House size={'2.5rem'} />
-          <span>Home</span>
+          Home
         </a>
 
         <a
           onClick={handleCloseMenu}
-          href="/about"
+          href="/projects"
+          aria-label="Navigate to the project page"
           className={'flex gap-6 items-center'}
         >
           <SquareUserRound size={'2.5rem'} />
-          <span>About us</span>
+          Projects
         </a>
-        <a
-          onClick={handleCloseMenu}
-          href="/menu"
-          className={'flex gap-6 items-center'}
-        >
-          <BookOpen size={'2.5rem'} />
-          <span>Menu</span>
-        </a>
+
         <a
           onClick={handleCloseMenu}
           href="/"
+          aria-label="Navigate to the blog page"
           className={'flex gap-6 items-center'}
         >
           <CalendarDays size={'2.5rem'} />
-          <span>Book</span>
+          Blog
         </a>
       </nav>
     </div>,

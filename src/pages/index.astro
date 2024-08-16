@@ -14,10 +14,11 @@ import photoMarco from '../assets/images/marco/photo-marco.png';
 import ChevronDown from '@/components/ChevronDown';
 import Skills from '@/components/Skills';
 // import TypewriterText from '@/components/TypewriterText/TypewriterText.astro';
-const pageTitle = 'Home Page';
+const pageTitle = 'Marco Rosenbaum';
+const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
   <section class="flex flex-col h-screen pt-16 gap-12 justify-between">
     <div class="flex flex-col flex-grow md:flex-row justify-around">
       <div class="flex flex-col justify-center flex-grow gap-12">
@@ -59,16 +60,36 @@ const pageTitle = 'Home Page';
     <ChevronDown client:only />
   </section>
   <section class="min-h-screen flex flex-col justify-around py-16">
+    <div class="text-xl flex flex-col gap-8">
+      <p>
+        I am a Web Developer based in beautiful Stockholm with a background in
+        electrical engineering.
+      </p>
+      <p>
+        Programming has always been a part of my job, but I discovered my true
+        passion in web development. I like the creative process of building
+        something from nothing just by writing code and I love the personal
+        challenge of achieving maximum efficiency when solving problems.
+      </p>
+      <p>
+        I'm always eager to learn and adapt to new skills, but my current tech
+        stack includes the following:
+      </p>
+    </div>
     <Skills client:visible />
-    <!-- <h1 class="text-4xl text-center">
-      Keep simple things simple and focus on making progress.
-    </h1> -->
     <div
-      class="flex flex-col sm:flex-row items-center justify-around flex-wrap gap-12"
+      class="flex flex-col md:flex-row md:justify-around gap-12 items-center"
     >
-      <div class="rounded-xl w-60 h-60 bg-blue-200">Services</div>
-      <div class="rounded-xl w-60 h-60 bg-blue-200">About me</div>
-      <div class="rounded-xl w-60 h-60 bg-blue-200">Projects</div>
+      <a
+        class="py-2 px-8 rounded-full border border-current text-center w-max hover:bg-accent-color duration-150"
+        href="/projects"
+        aria-label="Navigate to the projects page">What have I built?</a
+      >
+      <a
+        class="py-2 px-8 rounded-full border border-white text-center w-max hover:bg-currentColor duration-150"
+        href="/blog"
+        aria-label="Navigate to the blog page">Get to know my in my blog!</a
+      >
     </div>
   </section>
 </BaseLayout>
