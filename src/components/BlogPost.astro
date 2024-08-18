@@ -1,6 +1,6 @@
 ---
 const { title, url, description, pubDate } = Astro.props;
-const trimmedPubDate = pubDate.substring(0, 10);
+// const trimmedPubDate = pubDate.substring(0, 10);
 import image from '../assets/images/marco/photo-marco-w450.png';
 ---
 
@@ -17,7 +17,7 @@ import image from '../assets/images/marco/photo-marco-w450.png';
     <div class="flex flex-col gap-4">
       <p>{title}</p>
       <p>{description}</p>
-      <p class="mt-auto text-sm">Published: {trimmedPubDate}</p>
+      <p class="mt-auto text-sm">Published: {pubDate}</p>
     </div>
   </li></a
 >
