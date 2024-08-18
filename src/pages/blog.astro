@@ -2,10 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 const pageTitle = 'Blog Page';
+const pageDescription = 'Blog posts about me as a developer';
 const allPosts = await Astro.glob('./posts/*.md');
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
   <section class="py-32">
     <h1>Blog Posts</h1>
     <h3>

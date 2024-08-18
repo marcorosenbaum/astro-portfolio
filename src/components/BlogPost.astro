@@ -4,7 +4,7 @@ const { title, url, description, pubDate } = Astro.props;
 import image from '../assets/images/marco/photo-marco-w450.png';
 ---
 
-<a href={url}>
+<a href={url} aria-label="Navigate to blog post">
   <li class="flex gap-12 border border-accent-color rounded-xl p-4 bg-black/30">
     <img
       src={image.src}
