@@ -1,6 +1,7 @@
 ---
 import { User2, House, FolderOpen, FileText } from 'lucide-react';
 import Menu from './Menu';
+const currentUrl = Astro.url.pathname;
 ---
 
 <div class="">
@@ -11,20 +12,26 @@ import Menu from './Menu';
     <a href="/blog" class="flex gap-2"><FileText />Blog</a>
     <a href="/tags/" class="flex gap-2">Tags</a> -->
 
-    <a href="/" class="flex gap-2" aria-label="Navigate to the home page"
-      >Home</a
+    <a
+      href="/"
+      class=`${currentUrl=== "/"? "border-b border-accent-color": ""} flex gap-2`
+      aria-label="Navigate to the home page">Home</a
     >
 
     <a
       href="/projects"
-      class="flex gap-2"
+      class=`${currentUrl=== "/projects"? "border-b border-accent-color": ""} flex gap-2`
       aria-label="Navigate to the Projects page">Projects</a
     >
-    <a href="/blog" class="flex gap-2" aria-label="Navigate to the blog page"
-      >Blog</a
+    <a
+      href="/blog"
+      class=`${currentUrl=== "/blog"? "border-b border-accent-color": ""} flex gap-2`
+      aria-label="Navigate to the blog page">Blog</a
     >
-    <a href="/tags/" class="flex gap-2" aria-label="Navigate to the tags page"
-      >Tags</a
+    <a
+      href="/tags/"
+      class=`${currentUrl=== "/tags/"? "border-b border-accent-color": ""} flex gap-2`
+      aria-label="Navigate to the tags page">Tags</a
     >
   </div>
   <Menu client:only />

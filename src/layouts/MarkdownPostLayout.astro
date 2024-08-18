@@ -4,17 +4,19 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout>
-  <p>Written by {frontmatter.author}</p>
-  <div class="tags">
-    {
-      frontmatter.tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
-    }
-  </div>
-  <slot />
+  <section class="py-32">
+    <p>Written by {frontmatter.author}</p>
+    <div class="tags">
+      {
+        frontmatter.tags.map((tag) => (
+          <p class="tag">
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </p>
+        ))
+      }
+    </div>
+    <slot />
+  </section>
 </BaseLayout>
 <style>
   a {

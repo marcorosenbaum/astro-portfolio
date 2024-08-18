@@ -56,6 +56,16 @@ html.dark #moon-icon {
   display: block;
 }
 
+.start-text {
+  color: #141927;
+}
+html.dark .vision-text {
+  color: #04fbd6;
+}
+html.dark .start-text {
+  color: white;
+}
+
 html {
   font-size: 10px;
 }

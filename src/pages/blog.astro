@@ -6,12 +6,23 @@ const allPosts = await Astro.glob('./posts/*.md');
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p>This is where I will post about my journey learning Astro.</p>
-  <ul>
-    {
-      allPosts.map((post) => (
-        <BlogPost url={post.url} title={post.frontmatter.title} />
-      ))
-    }
-  </ul>
+  <section class="py-32">
+    <h1>Blog Posts</h1>
+    <p>
+      Here you can read about my daily live as a developer, learnings that I
+      have and issues that I face.
+    </p>
+    <ul class="flex flex-col gap-12">
+      {
+        allPosts.map((post) => (
+          <BlogPost
+            url={post.url}
+            title={post.frontmatter.title}
+            description={post.frontmatter.description}
+            pubDate={post.frontmatter.pubDate}
+          />
+        ))
+      }
+    </ul>
+  </section>
 </BaseLayout>
