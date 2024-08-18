@@ -9,10 +9,10 @@ const allPosts = await Astro.glob('./posts/*.md');
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
   <section class="py-32">
     <h1>Blog Posts</h1>
-    <h3>
+    <h2>
       Here you can read about my daily live as a developer, learnings that I
       have and issues that I face.
-    </h3>
+    </h2>
     <ul class="flex flex-col gap-12">
       {
         allPosts.map((post) => (

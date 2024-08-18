@@ -1,9 +1,12 @@
-import { defineConfig } from "astro/config";
-import react from "@astrojs/react";
-import tailwind from "@astrojs/tailwind";
+import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://marco-developer-portfolio.netlify.app",
+  site: 'https://marco-developer-portfolio.netlify.app',
   integrations: [react(), tailwind()],
+  devToolbar: {
+    enabled: false,
+  },
 });
