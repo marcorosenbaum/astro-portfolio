@@ -1,29 +1,25 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "My First Blog Post"
-pubDate: 2022-07-01
-description: "This is the first post of my new Astro blog."
-author: "Astro Learner"
+title: 'Kickstart My Developer Career with a Bootcamp - Was It Worth It?'
+pubDate: 2024-08-18
+description: 'A blog post about how I started my developer career.'
+author: 'Marco Rosenbaum'
 image:
-  url: "https://docs.astro.build/assets/rose.webp"
-  alt: "The Astro logo on a dark background with a pink glow."
-tags: ["astro", "blogging", "learning in public"]
+  url: 'https://docs.astro.build/assets/rose.webp'
+  alt: 'The Astro logo on a dark background with a pink glow.'
+tags: ['bootcamp', 'worth it', 'learning', 'developer']
 ---
 
-# My First Blog Post
+# Kickstart My Developer Career with a Bootcamp - Was It Worth It?
 
-Published on: 2022-07-01
+Published on: 2024-08-18
 
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+After exploring the world of web development through videos and online tutorials, I decided to attend a three-month full-time coding bootcamp with a frontend focus. The bootcamp was held remotely and was well-organized, with experienced trainers. Every day, I worked through a new section, and any questions that arose were answered during the 1-hour live session. During the last two weeks, I developed a simple concert-tracking app using Vue.js and Tailwind.
 
-## What I've accomplished
+However, was it worth it, and was it enough to call myself a developer?
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
+Yes, it was worth it, but no, it wasn’t enough. Three months is just not enough time to become proficient, though it was a good kickstart. It was an intense time, and I learned a lot. But at the same time, the more knowledge I gained, the more I realized how little I actually knew about web development. While I just scratched the surface of subjects like CSS, Tailwind, and Vue.js, I connected with proficient developers who shared their preferred resources and opinions. For me, that was the most valuable part of the bootcamp: getting in touch with people who have been in this field for many years.
 
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
+Once the bootcamp was finished, I continued learning with online courses on Udemy. I decided to dive deeper into JavaScript and Vue, spending several hours learning every day. I built my first portfolio website and was so proud of it. It was the first thing I built entirely by myself, without anyone’s advice. As you can imagine, a few months later, I found myself laughing at that portfolio website and at how proud I had been of it. I had made so much learning progress and again realized how little my knowledge was when I first finished that portfolio website.
 
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
-
-## What's next
-
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+Looking back, the bootcamp was great, but in my opinion, it should be seen as a good start into coding, not as something that will land you your dream job straight away.

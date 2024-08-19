@@ -1,15 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TypewriterText from '../components/TypewriterText/TypewriterText';
-import photoMarco450 from '../assets/images/marco/photo-marco-w450.png';
-import photoMarco600 from '../assets/images/marco/photo-marco-w600.png';
-import photoMarco750 from '../assets/images/marco/photo-marco-w750.png';
-import photoMarco900 from '../assets/images/marco/photo-marco-w900.png';
-import photoMarco1150 from '../assets/images/marco/photo-marco-w1150.png';
-import photoMarco1400 from '../assets/images/marco/photo-marco-w1400.png';
-import photoMarco1700 from '../assets/images/marco/photo-marco-w1700.png';
-import photoMarco2000 from '../assets/images/marco/photo-marco-w2000.png';
-import photoMarco from '../assets/images/marco/photo-marco.png';
+import photoMarco400w from '../assets/images/marco/photo-marco-400w.avif';
+import photoMarco600w from '../assets/images/marco/photo-marco-600w.avif';
+import photoMarco800w from '../assets/images/marco/photo-marco-800w.avif';
+import photoMarco1000w from '../assets/images/marco/photo-marco-1000w.avif';
+import photoMarco1200w from '../assets/images/marco/photo-marco-1200w.avif';
+import photoMarco1600w from '../assets/images/marco/photo-marco-1600w.avif';
+import photoMarco2000w from '../assets/images/marco/photo-marco-2000w.avif';
 
 import ChevronDown from '@/components/ChevronDown';
 import Skills from '@/components/Skills';
@@ -36,23 +34,20 @@ const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
         <img
           class="mx-auto text-center h-full object-contain"
           srcset={`
-            ${photoMarco.src} 2500w,
-            ${photoMarco2000.src} 2000w,
-            ${photoMarco1700.src} 1700w,
-            ${photoMarco1400.src} 1400w,
-            ${photoMarco1150.src} 11500w,
-            ${photoMarco900.src} 900w,
-            ${photoMarco750.src} 750w,
-            ${photoMarco600.src} 600w,
-            ${photoMarco450.src} 450w
+            ${photoMarco400w.src} 400w,
+            ${photoMarco600w.src} 600w,
+            ${photoMarco800w.src} 800w,
+            ${photoMarco1000w.src} 1000w,
+            ${photoMarco1200w.src} 1200w,
+            ${photoMarco1600w.src} 1600w,
+            ${photoMarco2000w.src} 2000w,
           `}
           sizes="
           (max-width: 1023px) 90vw, 
           (min-width: 1024px) 35vw"
-          width="2000"
-          height="1920"
+          width="1000"
+          height="920"
           alt="Photo of Marco Rosenbaum"
-          loading="lazy"
         />
       </div>
     </div>
