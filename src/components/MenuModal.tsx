@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
-import {
-  House,
-  SquareUserRound,
-  X,
-  BookOpen,
-  CalendarDays,
-} from 'lucide-react';
+// import {
+//   House,
+//   SquareUserRound,
+//   X,
+//   BookOpen,
+//   CalendarDays,
+// } from 'lucide-react';
 
 const MenuModal: React.FC<{ closeMenu: () => void; showModal: boolean }> = ({
   closeMenu,
@@ -38,7 +38,7 @@ const MenuModal: React.FC<{ closeMenu: () => void; showModal: boolean }> = ({
           className="p-4 text-sm absolute top-0 right-0"
         >
           close menu
-          <X size={'2.5rem'} />
+          {/* <X size={'2.5rem'} /> */}
         </button>
         <a
           onClick={handleCloseMenu}
@@ -46,7 +46,7 @@ const MenuModal: React.FC<{ closeMenu: () => void; showModal: boolean }> = ({
           aria-label="Navigate to the home page"
           className={'flex gap-6 items-center'}
         >
-          <House size={'2.5rem'} />
+          {/* <House size={'2.5rem'} /> */}
           Home
         </a>
 
@@ -56,7 +56,7 @@ const MenuModal: React.FC<{ closeMenu: () => void; showModal: boolean }> = ({
           aria-label="Navigate to the project page"
           className={'flex gap-6 items-center'}
         >
-          <SquareUserRound size={'2.5rem'} />
+          {/* <SquareUserRound size={'2.5rem'} /> */}
           Projects
         </a>
 
@@ -66,7 +66,7 @@ const MenuModal: React.FC<{ closeMenu: () => void; showModal: boolean }> = ({
           aria-label="Navigate to the blog page"
           className={'flex gap-6 items-center'}
         >
-          <CalendarDays size={'2.5rem'} />
+          {/* <CalendarDays size={'2.5rem'} /> */}
           Blog
         </a>
       </nav>
