@@ -67,32 +67,32 @@ html.dark .start-text {
 }
 
 html {
-  font-size: 10px;
+  font-size: 16px;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 @media screen and (min-width: 640px) {
   html {
     padding: 0rem 2rem;
-    font-size: 11px;
+    font-size: 16px;
   }
 }
 
 @media screen and (min-width: 768px) {
   html {
     padding: 0rem 4rem;
-    font-size: 13px;
+    font-size: 16px;
   }
 }
 
