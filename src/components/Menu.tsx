@@ -16,6 +16,7 @@ const Menu = () => {
   return (
     <div>
       <button
+        id="menu-button"
         aria-label="Open the menu"
         className="flex md:!hidden"
         onClick={handleMenuClick}

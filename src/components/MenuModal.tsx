@@ -28,7 +28,7 @@ const MenuModal: React.FC<{ closeMenu: () => void; showModal: boolean }> = ({
   return createPortal(
     <div
       id="menu-modal"
-      className={`fixed z-[1000]  h-screen top-0 sm:w-1/2 w-screen duration-500  flex justify-center items-center ${
+      className={`absolute z-[1000]  h-screen top-0 sm:w-1/2 w-screen duration-500  flex justify-center items-center ${
         showModal ? '  right-[0%]' : ' -right-[100%]'
       }`}
     >
