@@ -15,6 +15,8 @@ const { pageTitle, pageDescription } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
   </head>
   <body>
     <Header />
@@ -23,6 +25,17 @@ const { pageTitle, pageDescription } = Astro.props;
     <Footer />
     <script>
       import '../scripts/menu.js';
+    </script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', (user: any) => {
+          if (!user) {
+            window.netlifyIdentity.on('login', () => {
+              document.location.href = '/admin/';
+            });
+          }
+        });
+      }
     </script>
   </body>
 </html>
