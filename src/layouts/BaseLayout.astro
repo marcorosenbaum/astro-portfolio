@@ -15,8 +15,8 @@ const { pageTitle, pageDescription } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-    ></script>
+    <!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script> -->
   </head>
   <body>
     <Header />
@@ -26,7 +26,7 @@ const { pageTitle, pageDescription } = Astro.props;
     <script>
       import '../scripts/menu.js';
     </script>
-    <script>
+    <!-- <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on('init', (user: any) => {
           if (!user) {
@@ -36,6 +36,6 @@ const { pageTitle, pageDescription } = Astro.props;
           }
         });
       }
-    </script>
+    </script> -->
   </body>
 </html>
