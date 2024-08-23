@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Kickstart My Developer Career with a Bootcamp - Was It Worth It?'
-pubDate: 2024-08-18
+pubDate: '2024-08-18'
 description: 'A blog post about how I started my developer career.'
 author: 'Marco Rosenbaum'
 image:
