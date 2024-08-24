@@ -6,15 +6,42 @@ import PROJECTS from '../assets/projects';
 
 const pageTitle = 'Projects Page';
 const pageDescription = 'Projects I have worked on';
+const allProjects = await Astro.glob('../content/projects/*.json');
 ---
 
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
   <section
     class="min-h-screen flex flex-col items-center justify-center gap-12 py-32"
   >
+    {
+      allProjects.map((project) => (
+        <div>
+          <h1>{project.title}</h1>
+          <p>{project.description}</p>
+          <img
+            alt={project.title}
+            loading="lazy"
+            class="rounded-xl border border-accent-color shadow-2xl shadow-black"
+            srcset={`
+            ${project.image400} 400w,
+            ${project.image600} 600w,
+            ${project.image800} 800w,
+            ${project.image1000} 1000w,
+            ${project.image1200} 1200w,
+            ${project.image1600} 1600w,
+            ${project.image2000} 2000w,
+                    `}
+            sizes="(max-width: 768px) 80vw, 40vw"
+            width="1000"
+            height="565"
+          />
+        </div>
+      ))
+    }
+
     <div class="grid gap-x-20 gap-y-40">
       {
-        PROJECTS.map((project, index) => (
+        allProjects.map((project, index) => (
           <>
             <div class="grid col-span-1 md:col-span-2  grid-cols-1 md:grid-cols-2 gap-12">
               {index % 2 === 0 ? (
@@ -24,13 +51,13 @@ const pageDescription = 'Projects I have worked on';
                     loading="lazy"
                     class="rounded-xl border border-accent-color shadow-2xl shadow-black"
                     srcset={`
-                    ${project.image.width400.src} 400w,
-                    ${project.image.width600.src} 600w,
-                    ${project.image.width800.src} 800w,
-                    ${project.image.width1000.src} 1000w,
-                    ${project.image.width1200.src} 1200w,
-                    ${project.image.width1600.src} 1600w,
-                    ${project.image.width2000.src} 2000w,
+                    ${project.image400} 400w,
+                    ${project.image600} 600w,
+                    ${project.image800} 800w,
+                    ${project.image1000} 1000w,
+                    ${project.image1200} 1200w,
+                    ${project.image1600} 1600w,
+                    ${project.image2000} 2000w,
                     `}
                     sizes="(max-width: 768px) 80vw, 40vw"
                     width="1000"
@@ -40,7 +67,7 @@ const pageDescription = 'Projects I have worked on';
                     <h2>{project.title}</h2>
                     <p>{project.descriptionLong}</p>
                     <div class="flex gap-4 flex-wrap">
-                      {project.skills.map((skill) => (
+                      {project.skills.map((skill: any) => (
                         <span class="skill border border-black bg-white text-black  px-4 py-1 rounded-full text-sm mr-2">
                           {skill}
                         </span>
@@ -62,7 +89,7 @@ const pageDescription = 'Projects I have worked on';
                     <h2>{project.title}</h2>
                     <p>{project.descriptionLong}</p>
                     <div class="flex gap-4 flex-wrap">
-                      {project.skills.map((skill) => (
+                      {project.skills.map((skill: any) => (
                         <span class="skill border border-black bg-white text-black  px-4 py-1 rounded-full text-sm mr-2">
                           {skill}
                         </span>
@@ -82,13 +109,13 @@ const pageDescription = 'Projects I have worked on';
                     loading="lazy"
                     class="rounded-xl border border-accent-color shadow-2xl shadow-black"
                     srcset={`
-                    ${project.image.width400.src} 400w,
-                    ${project.image.width600.src} 600w,
-                    ${project.image.width800.src} 800w,
-                    ${project.image.width1000.src} 1000w,
-                    ${project.image.width1200.src} 1200w,
-                    ${project.image.width1600.src} 1600w,
-                    ${project.image.width2000.src} 2000w,
+                    ${project.image400} 400w,
+                    ${project.image600} 600w,
+                    ${project.image800} 800w,
+                    ${project.image1000} 1000w,
+                    ${project.image1200} 1200w,
+                    ${project.image1600} 1600w,
+                    ${project.image2000} 2000w,
                     `}
                     sizes="(max-width: 768px) 80vw, 40vw"
                     width="1000"

@@ -1,14 +1,11 @@
 {
-  "skills": [
-    "decap",
-    "cms"
-  ],
+  "skills": ["decap", "cms"],
   "websiteLink": "https://example.com",
   "descriptionLong": "jsut testing everything now",
   "title": "first CMS project",
-  "image400": "/uploads/photo-marco-1200w.avif",
+  "image400": "/uploads/photo-marco-400w.avif",
   "image600": "/uploads/photo-marco-600w.avif",
-  "description": "cms project test",
   "image800": "/uploads/photo-marco-800w.avif",
+  "description": "cms project test",
   "githubLink": "https://github.com"
 }
