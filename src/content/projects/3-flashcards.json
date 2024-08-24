@@ -1,0 +1,23 @@
+{
+  "image1600": "/uploads/photo-flashcards-1600w.avif",
+  "skills": [
+    "Vue",
+    "Tailwind",
+    "Firebase",
+    "Firestore",
+    "Pinia",
+    "Chart.js",
+    "TipTap"
+  ],
+  "websiteLink": "https://marco-flashcards.netlify.app/",
+  "descriptionLong": "Flashcards is a web application where you can create flashcards and keep track of your learning progress. The goal was to create a simple and clean application that helps people to memorize information while getting a visual feedback of their learning progress.\n",
+  "title": "Flashcards",
+  "image2000": "/uploads/photo-flashcards-2000w.avif",
+  "image400": "/uploads/photo-flashcards-400w.avif",
+  "image1000": "/uploads/photo-flashcards-1000w.avif",
+  "image600": "/uploads/photo-flashcards-600w.avif",
+  "image1200": "/uploads/photo-flashcards-1200w.avif",
+  "description": "Flashcards is a web application where you can create flashcards and keep track of your learning progress.",
+  "image800": "/uploads/photo-flashcards-800w.avif",
+  "githubLink": "https://github.com/marcorosenbaum/flashcards"
+}

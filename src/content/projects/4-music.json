@@ -1,0 +1,15 @@
+{
+  "image1600": "/uploads/photo-music-1600w.avif",
+  "skills": ["Vue", "Tailwind", "Firebase", "Firestore", "Pinia"],
+  "websiteLink": "",
+  "descriptionLong": "This is the project that I built during the course 'Vue - The complete guide by Zero to Mastery'. It is a music player web application with user authentication. Users can upload their own songs and comment on other songs.\n",
+  "title": "Music Prototype",
+  "image2000": "/uploads/photo-music-2000w.avif",
+  "image400": "/uploads/photo-music-400w.avif",
+  "image1000": "/uploads/photo-music-1000w.avif",
+  "image600": "/uploads/photo-music-600w.avif",
+  "image1200": "/uploads/photo-music-1200w.avif",
+  "description": "The Prototype of a music player web application.",
+  "image800": "/uploads/photo-music-800w.avif",
+  "githubLink": "https://github.com/marcorosenbaum/music-example"
+}
