@@ -1,0 +1,19 @@
+{
+  "image1600": "/uploads/photo-og-preview-1600w.avif",
+  "skills": [
+    "Node",
+    "Express",
+    "TypeScript"
+  ],
+  "websiteLink": "https://www.npmjs.com/package/og-preview",
+  "descriptionLong": "OG-preview is a CLI tool to preview all available Open Graph meta data from the local development server. This allows the developer to check how the links of the website will appear when shared on social media platforms without deploying your project or checking every URL manually. You simply need to execute a single CLI command.\n",
+  "title": "OG-Preview",
+  "image2000": "/uploads/photo-og-preview-2000w.avif",
+  "image400": "/uploads/photo-og-preview-600w.avif",
+  "image1000": "/uploads/photo-og-preview-1000w.avif",
+  "image600": "/uploads/photo-og-preview-600w.avif",
+  "image1200": "/uploads/photo-og-preview-1200w.avif",
+  "description": "      A npm-package that generates a preview of how all links appear when shared on social media. Simply execute a CLI command.",
+  "image800": "/uploads/photo-og-preview-800w.avif",
+  "githubLink": "https://github.com/marcorosenbaum/og-preview"
+}
