@@ -32,3 +32,24 @@ collections:
       # - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
       # - { label: 'Rating (scale of 1-5)', name: 'rating', widget: 'number' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'projects' # Used in routes, e.g., /admin/collections/projects
+      label: 'Projects' # Used in the UI
+      folder: 'src/content/projects' # The path to the folder where the JSON files are stored
+      create: true # Allow users to create new documents in this collection
+      slug: '{{slug}}' # Filename template, e.g., project-title.json
+      format: 'json' # Specify the format as JSON
+      fields: # The fields for each document
+        - { label: 'Title', name: 'title', widget: 'string' }
+        - { label: 'Description', name: 'description', widget: 'string' }
+        - { label: 'Long Description', name: 'descriptionLong', widget: 'text' }
+        - { label: 'Skills', name: 'skills', widget: 'list', field: { label: 'Skill', name: 'skill', widget: 'string' } }
+        - { label: 'GitHub Link', name: 'githubLink', widget: 'string' }
+        - { label: 'Website Link', name: 'websiteLink', widget: 'string' }
+        - { label: 'Image 400w', name: 'image400', widget: 'image', required: false }
+        - { label: 'Image 600w', name: 'image600', widget: 'image', required: false }
+        - { label: 'Image 800w', name: 'image800', widget: 'image', required: false }
+        - { label: 'Image 1000w', name: 'image1000', widget: 'image', required: false }
+        - { label: 'Image 1200w', name: 'image1200', widget: 'image', required: false }
+        - { label: 'Image 1600w', name: 'image1600', widget: 'image', required: false }
+        - { label: 'Image 2000w', name: 'image2000', widget: 'image', required: false }
