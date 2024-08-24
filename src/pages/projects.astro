@@ -13,32 +13,6 @@ const allProjects = await Astro.glob('../content/projects/*.json');
   <section
     class="min-h-screen flex flex-col items-center justify-center gap-12 py-32"
   >
-    {
-      allProjects.map((project) => (
-        <div>
-          <h1>{project.title}</h1>
-          <p>{project.description}</p>
-          <img
-            alt={project.title}
-            loading="lazy"
-            class="rounded-xl border border-accent-color shadow-2xl shadow-black"
-            srcset={`
-            ${project.image400} 400w,
-            ${project.image600} 600w,
-            ${project.image800} 800w,
-            ${project.image1000} 1000w,
-            ${project.image1200} 1200w,
-            ${project.image1600} 1600w,
-            ${project.image2000} 2000w,
-                    `}
-            sizes="(max-width: 768px) 80vw, 40vw"
-            width="1000"
-            height="565"
-          />
-        </div>
-      ))
-    }
-
     <div class="grid gap-x-20 gap-y-40">
       {
         allProjects.map((project, index) => (

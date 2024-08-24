@@ -55,41 +55,41 @@ collections:
           label: 'Image 400w',
           name: 'image400',
           widget: 'image',
-          required: false,
+          required: true,
         }
       - {
           label: 'Image 600w',
           name: 'image600',
           widget: 'image',
-          required: false,
+          required: true,
         }
       - {
           label: 'Image 800w',
           name: 'image800',
           widget: 'image',
-          required: false,
+          required: true,
         }
       - {
           label: 'Image 1000w',
           name: 'image1000',
           widget: 'image',
-          required: false,
+          required: true,
         }
       - {
           label: 'Image 1200w',
           name: 'image1200',
           widget: 'image',
-          required: false,
+          required: true,
         }
       - {
           label: 'Image 1600w',
           name: 'image1600',
           widget: 'image',
-          required: false,
+          required: true,
         }
       - {
           label: 'Image 2000w',
           name: 'image2000',
           widget: 'image',
-          required: false,
+          required: true,
         }
