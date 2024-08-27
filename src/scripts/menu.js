@@ -5,6 +5,10 @@ if (showMenuButton) {
     if (menuModal) {
       menuModal.classList.remove('translate-x-[100%]');
     }
+    const body = document.querySelector('body');
+    if (body) {
+      body.classList.add('overflow-hidden');
+    }
   });
 }
 
@@ -14,6 +18,10 @@ if (hideMenuButton) {
     const menuModal = document.querySelector('#menu-modal');
     if (menuModal) {
       menuModal.classList.add('translate-x-[100%]');
+    }
+    const body = document.querySelector('body');
+    if (body) {
+      body.classList.remove('overflow-hidden');
     }
   });
 }

@@ -18,7 +18,7 @@ const ChevronDown: React.FC = () => {
 
   return (
     <div
-      className={`flex  justify-center duration-300 ${scrollPosition > 40 ? 'opacity-0' : 'opacity-100'} `}
+      className={`flex justify-center duration-300   ${scrollPosition > 40 ? 'opacity-0' : 'opacity-100'} `}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ const ChevronDown: React.FC = () => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="lucide lucide-chevron-down animate-bounce "
+        className="lucide lucide-chevron-down animate-bounce  -z-10"
       >
         <path d="m6 9 6 6 6-6"></path>
       </svg>
