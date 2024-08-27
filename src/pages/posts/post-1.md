@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Kickstart My Developer Career with a Bootcamp - Was It Worth It?'
-pubDate: '2024-08-18'
+pubDate: '2024-08-01'
 description: 'A blog post about how I started my developer career.'
 author: 'Marco Rosenbaum'
 image:
@@ -12,7 +12,7 @@ tags: ['bootcamp', 'worth it', 'learning', 'developer']
 
 # Kickstart My Developer Career with a Bootcamp - Was It Worth It?
 
-Published on: 2024-08-18
+Published on: 2024-08-01
 
 After exploring the world of web development through videos and online tutorials, I decided to attend a three-month full-time coding bootcamp with a frontend focus. The bootcamp was held remotely and was well-organized, with experienced trainers. Every day, I worked through a new section, and any questions that arose were answered during the 1-hour live session. During the last two weeks, I developed a simple concert-tracking app using Vue.js and Tailwind.
 
