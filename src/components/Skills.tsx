@@ -19,7 +19,7 @@ const skills = [
   { name: 'Node', logo: NodeLogo },
   { name: 'Vue', logo: VueLogo },
   { name: 'React', logo: ReactLogo },
-  // { name: 'Next', logo: NextLogo },
+  { name: 'Next', logo: NextLogo },
   { name: 'Astro', logo: AstroLogo },
   { name: 'Firebase', logo: FirebaseLogo },
 ];
@@ -32,7 +32,7 @@ const Skills: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex gap-8 flex-wrap">
+    <div className="grid grid-cols-2 sm:grid-cols-5 xl:grid-cols-10  gap-8 ">
       {skills.map((skill, index) => (
         <div
           key={index}
