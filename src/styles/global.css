@@ -23,7 +23,8 @@ html.dark {
   );
   color: white;
 }
-#menu-modal {
+#menu-modal,
+#contact-form-modal {
   background: linear-gradient(
     309deg,
     rgb(92, 122, 167) 0%,
@@ -33,7 +34,8 @@ html.dark {
   color: black;
 }
 
-html.dark #menu-modal {
+html.dark #menu-modal,
+#contact-form-modal {
   background: linear-gradient(
     299deg,
     rgba(11, 14, 19, 1) 0%,

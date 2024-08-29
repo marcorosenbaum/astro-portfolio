@@ -11,7 +11,7 @@ import photoMarco2000w from 'public/uploads/photo-marco-2000w.webp';
 
 import Skills from '@/components/Skills';
 import ChevronDown from '@/components/ChevronDown.tsx';
-// import TypewriterText from '@/components/TypewriterText/TypewriterText.astro';
+import ContactForm from '@/components/ContactForm.astro';
 const pageTitle = 'Marco Rosenbaum';
 const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
 ---
@@ -86,25 +86,12 @@ const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
         href="/blog"
         aria-label="Navigate to the blog page">Get to know me in my blog!</a
       >
+      <button
+        id="show-contact-form-button"
+        class="py-2 px-8 rounded-full border text-center w-max hover:bg-white border-current hover:text-black duration-150 cursor-pointer"
+        aria-label="Send me a message">Contact me!</button
+      >
     </div>
-    <form name="contact" method="POST" data-netlify="true">
-      <input
-        type="hidden"
-        name="subject"
-        value="Sales inquiry from mysitename.netlify.app"
-      />
-      <p>
-        <label>Your Name: <input type="text" name="name" /></label>
-      </p>
-      <p>
-        <label>Your Email: <input type="email" name="email" /></label>
-      </p>
-      <p>
-        <label>Message: <textarea name="message"></textarea></label>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
-    </form>
+    <ContactForm />
   </section>
 </BaseLayout>

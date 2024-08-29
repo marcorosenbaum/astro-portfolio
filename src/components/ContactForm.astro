@@ -1,0 +1,35 @@
+---
+
+---
+
+<div
+  id="contact-form-modal"
+  class="w-screen h-screen fixed top-0 bottom-0 right-0 bg-black/90 flex flex-col justify-center items-center translate-x-[100%] overflow-hidden duration-300"
+>
+  <button id="hide-contact-form-button">X close</button>
+  <form name="contact" method="POST" data-netlify="true">
+    <input
+      type="hidden"
+      name="subject"
+      value="Contact request from marcorosenbaum.com"
+    />
+    <p>
+      <label>
+        Your Name: <input type="text" name="name" />
+      </label>
+    </p>
+    <p>
+      <label>
+        Your Email: <input type="email" name="email" />
+      </label>
+    </p>
+    <p>
+      <label>
+        Message: <textarea name="message"></textarea>
+      </label>
+    </p>
+    <p>
+      <button type="submit">Send</button>
+    </p>
+  </form>
+</div>
