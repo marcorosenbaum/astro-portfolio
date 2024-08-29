@@ -87,5 +87,24 @@ const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
         aria-label="Navigate to the blog page">Get to know me in my blog!</a
       >
     </div>
+    <form name="contact" method="POST" data-netlify="true">
+      <input
+        type="hidden"
+        name="subject"
+        value="Sales inquiry from mysitename.netlify.app"
+      />
+      <p>
+        <label>Your Name: <input type="text" name="name" /></label>
+      </p>
+      <p>
+        <label>Your Email: <input type="email" name="email" /></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
   </section>
 </BaseLayout>
