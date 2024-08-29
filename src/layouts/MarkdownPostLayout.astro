@@ -1,21 +1,25 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+
 const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout>
   <section class="py-32">
-    <p>Written by {frontmatter.author}</p>
-    <div class="tags">
-      {
-        frontmatter.tags.map((tag: any) => (
-          <p class="tag">
-            <a href={`/tags/${tag}`}>{tag}</a>
-          </p>
-        ))
-      }
+    <div class="max-w-[40rem] text-justify flex flex-col gap-4 mx-auto">
+      <div class="tags">
+        {
+          frontmatter.tags.map((tag: any) => (
+            <p class="tag">
+              <a href={`/tags/${tag}`}>{tag}</a>
+            </p>
+          ))
+        }
+      </div>
+      <p>Written by {frontmatter.author}</p>
+      <p>{frontmatter.pubDate}</p>
+      <slot />
     </div>
-    <slot />
   </section>
 </BaseLayout>
 <style>

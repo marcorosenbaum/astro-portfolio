@@ -82,24 +82,6 @@ h3 {
   font-size: 1.25rem;
 }
 
-@media screen and (min-width: 640px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  html {
-    font-size: 16px;
-  }
-}
-
 .fly-in {
   opacity: 0;
   animation: flyIn 0.5s forwards;
