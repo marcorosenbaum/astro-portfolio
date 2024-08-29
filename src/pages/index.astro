@@ -11,7 +11,7 @@ import photoMarco2000w from 'public/uploads/photo-marco-2000w.webp';
 
 import Skills from '@/components/Skills';
 import ChevronDown from '@/components/ChevronDown.tsx';
-import ContactForm from '@/components/ContactForm.astro';
+import ContactForm from '@/components/ContactForm.tsx';
 const pageTitle = 'Marco Rosenbaum';
 const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
 ---
@@ -92,6 +92,6 @@ const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
         aria-label="Send me a message">Contact me!</button
       >
     </div>
-    <ContactForm />
+    <ContactForm client:visible />
   </section>
 </BaseLayout>

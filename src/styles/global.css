@@ -35,7 +35,7 @@ html.dark {
 }
 
 html.dark #menu-modal,
-#contact-form-modal {
+html.dark #contact-form-modal {
   background: linear-gradient(
     299deg,
     rgba(11, 14, 19, 1) 0%,
