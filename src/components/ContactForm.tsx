@@ -13,8 +13,9 @@ const ContactForm: React.FC = () => {
     formState: { errors },
   } = useForm<ContactFormInputs>();
 
-  const onSubmit: SubmitHandler<ContactFormInputs> = (data) => {
+  const onSubmit: SubmitHandler<ContactFormInputs> = (data, event) => {
     console.log('Form submitted!', data);
+    event?.target.submit();
   };
 
   return (
