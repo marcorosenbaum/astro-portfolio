@@ -11,7 +11,6 @@ import photoMarco2000w from 'public/uploads/photo-marco-2000w.webp';
 
 import Skills from '@/components/Skills';
 import ChevronDown from '@/components/ChevronDown.tsx';
-import ContactForm from '@/components/ContactForm.tsx';
 const pageTitle = 'Marco Rosenbaum';
 const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
 ---
@@ -32,7 +31,7 @@ const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
           Turning Vision into Reality with Code.
         </h1>
       </div>
-      <div class="max-h-[50vh] lg:max-w-[35vw] lg:max-h-[80vh]">
+      <div class="max-h-[40vh] lg:max-w-[35vw] lg:max-h-[80vh]">
         <img
           class="mx-auto text-center h-full object-contain"
           srcset={`
@@ -54,7 +53,7 @@ const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
       </div>
     </div>
 
-    <ChevronDown client:load />
+    <ChevronDown client:only />
   </section>
   <section class="min-h-screen flex flex-col justify-around py-16 gap-16">
     <div class="text-xl flex flex-col gap-8">
@@ -87,11 +86,9 @@ const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
         aria-label="Navigate to the blog page">Get to know me in my blog!</a
       >
       <button
-        id="show-contact-form-button"
-        class="py-2 px-8 rounded-full border text-center w-max hover:bg-white border-current hover:text-black duration-150 cursor-pointer"
+        class="show-contact-form-btn py-2 px-8 rounded-full border text-center w-max hover:bg-white border-current hover:text-black duration-150 cursor-pointer"
         aria-label="Send me a message">Contact me!</button
       >
     </div>
-    <ContactForm />
   </section>
 </BaseLayout>

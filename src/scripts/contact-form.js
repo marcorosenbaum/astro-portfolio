@@ -1,8 +1,12 @@
-const showContactFormButton = document.querySelector(
-  '#show-contact-form-button'
+// Select all elements with the class 'show-contact-form-btn'
+const showContactFormButtons = document.querySelectorAll(
+  '.show-contact-form-btn'
 );
-if (showContactFormButton) {
-  showContactFormButton.addEventListener('click', () => {
+
+// Iterate over each button and attach the event listener
+showContactFormButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    console.log('show');
     const contactFormModal = document.querySelector('#contact-form-modal');
     if (contactFormModal) {
       contactFormModal.classList.remove('translate-x-[100%]');
@@ -12,7 +16,7 @@ if (showContactFormButton) {
       body.classList.add('overflow-hidden');
     }
   });
-}
+});
 
 const hideContactFormButton = document.querySelector(
   '#hide-contact-form-button'
