@@ -35,57 +35,63 @@ const ContactForm: React.FC = () => {
           method="POST"
           data-netlify="true"
           onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col gap-4 w-full p-4 sm:px-8 md:px-12 md:w-3/4 max-w-[800px] "
         >
           <input
             type="hidden"
             name="subject"
             value="Contact request from marcorosenbaum.com"
           />
-          <p>
-            <label>
-              Your Name:{' '}
-              <input
-                type="text"
-                {...register('name', { required: 'Name is required' })}
-              />
-            </label>
+          <p className="flex flex-col">
+            <label>Name:</label>
+            <input
+              className=" rounded-xl p-2 border border-gray-400 text-black"
+              type="text"
+              placeholder="Your name"
+              {...register('name', { required: 'Name is required' })}
+            />
+            {errors.name && (
+              <p className="text-red-500">{errors.name.message}</p>
+            )}{' '}
+          </p>
+          <p className="flex flex-col">
+            <label>Email:</label>
+            <input
+              className=" rounded-xl p-2 border border-gray-400 text-black"
+              type="email"
+              placeholder="Your email"
+              {...register('email', {
+                required: 'Email is required',
+                pattern: {
+                  value: /^\S+@\S+$/i,
+                  message: 'Please enter a valid email address',
+                },
+              })}
+            />
+            {errors.name && (
+              <p className="text-red-500">{errors.name.message}</p>
+            )}{' '}
+          </p>
+          <p className="flex flex-col">
+            <label>Message:</label>
+            <textarea
+              className=" rounded-xl p-2 border border-gray-400 text-black h-32"
+              placeholder="Please enter your message here. I will get back to you as soon as possible."
+              {...register('message', {
+                required: 'Message is required',
+              })}
+            ></textarea>
             {errors.name && (
               <p className="text-red-500">{errors.name.message}</p>
             )}{' '}
           </p>
           <p>
-            <label>
-              Your Email:{' '}
-              <input
-                type="email"
-                {...register('email', {
-                  required: 'Email is required',
-                  pattern: {
-                    value: /^\S+@\S+$/i,
-                    message: 'Please enter a valid email address',
-                  },
-                })}
-              />
-            </label>
-            {errors.name && (
-              <p className="text-red-500">{errors.name.message}</p>
-            )}{' '}
-          </p>
-          <p>
-            <label>
-              Message:{' '}
-              <textarea
-                {...register('message', {
-                  required: 'Message is required',
-                })}
-              ></textarea>
-            </label>
-            {errors.name && (
-              <p className="text-red-500">{errors.name.message}</p>
-            )}{' '}
-          </p>
-          <p>
-            <button type="submit">Send</button>
+            <button
+              className="py-2 mt-8 rounded-full border text-center w-full bg-white text-black border-black"
+              type="submit"
+            >
+              Send
+            </button>
           </p>
         </form>
       </div>
