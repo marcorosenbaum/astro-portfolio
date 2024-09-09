@@ -4,7 +4,6 @@ const showContactFormButtons = document.querySelectorAll(
 
 showContactFormButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    console.log('show');
     const contactFormModal = document.querySelector('#contact-form-modal');
     if (contactFormModal) {
       contactFormModal.classList.remove('translate-x-[100%]');
@@ -22,7 +21,6 @@ const hideContactFormButton = document.querySelector(
 
 if (hideContactFormButton) {
   hideContactFormButton.addEventListener('click', () => {
-    console.log('hide');
     const contactFormModal = document.querySelector('#contact-form-modal');
     if (contactFormModal) {
       contactFormModal.classList.add('translate-x-[100%]');
