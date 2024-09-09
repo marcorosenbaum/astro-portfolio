@@ -17,8 +17,10 @@ if (showContactFormButton) {
 const hideContactFormButton = document.querySelector(
   '#hide-contact-form-button'
 );
+
 if (hideContactFormButton) {
   hideContactFormButton.addEventListener('click', () => {
+    console.log('hide');
     const contactFormModal = document.querySelector('#contact-form-modal');
     if (contactFormModal) {
       contactFormModal.classList.add('translate-x-[100%]');
