@@ -1,9 +1,7 @@
-// Select all elements with the class 'show-contact-form-btn'
 const showContactFormButtons = document.querySelectorAll(
   '.show-contact-form-btn'
 );
 
-// Iterate over each button and attach the event listener
 showContactFormButtons.forEach((button) => {
   button.addEventListener('click', () => {
     console.log('show');

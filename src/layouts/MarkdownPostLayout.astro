@@ -7,12 +7,14 @@ const { frontmatter } = Astro.props;
 <BaseLayout>
   <section class="py-32">
     <div class="max-w-[40rem] text-justify flex flex-col gap-4 mx-auto">
-      <div class="tags">
+      <div class="tags flex gap-4">
         {
           frontmatter.tags.map((tag: any) => (
-            <p class="tag">
-              <a href={`/tags/${tag}`}>{tag}</a>
-            </p>
+            <a href={`/tags/${tag}`}>
+              <p class="flex gap-4 bg-white border border-black text-black px-4 py-1 rounded-xl ">
+                {tag}
+              </p>
+            </a>
           ))
         }
       </div>
