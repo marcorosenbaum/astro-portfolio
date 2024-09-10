@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import TypewriterText from '../components/TypewriterText/TypewriterText';
 import photoMarco400w from 'public/uploads/photo-marco-400w.webp';
 import photoMarco600w from 'public/uploads/photo-marco-600w.webp';
 import photoMarco800w from 'public/uploads/photo-marco-800w.webp';
@@ -9,6 +8,7 @@ import photoMarco1200w from 'public/uploads/photo-marco-1200w.webp';
 import photoMarco1600w from 'public/uploads/photo-marco-1600w.webp';
 import photoMarco2000w from 'public/uploads/photo-marco-2000w.webp';
 
+import TypewriterText from '../components/TypewriterText/TypewriterText.tsx';
 import Skills from '@/components/Skills';
 import ChevronDown from '@/components/ChevronDown.tsx';
 const pageTitle = 'Marco Rosenbaum';
@@ -31,7 +31,7 @@ const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
           Turning Vision into Reality with Code.
         </h1>
       </div>
-      <div class="max-h-[40vh] lg:max-w-[35vw] lg:max-h-[80vh]">
+      <!-- <div class="max-h-[40vh] lg:max-w-[35vw] lg:max-h-[80vh]">
         <img
           class="mx-auto text-center h-full object-contain"
           srcset={`
@@ -50,7 +50,7 @@ const pageDescription = 'Marco Rosenbaum - Web Developer based in Stockholm';
           height="920"
           alt="Photo of Marco Rosenbaum"
         />
-      </div>
+      </div> -->
     </div>
 
     <ChevronDown client:only />
