@@ -9,7 +9,7 @@
     "Decap CMS"
   ],
   "websiteLink": "https://www.marcorosenbaum.com/",
-  "descriptionLong": "This website is built using astro js, Tailwind, react and decap cms. It showcases my skills and projects and includes a blog section where I write about my life as a developer. I focused on simplicity and high performance and maintained a 100 lighthouse score. I used Netlifys functionalites to keep the website as simple as possible.",
+  "descriptionLong": "This website is built using Astro.js, Tailwind, React, and Decap CMS. It showcases my skills and projects, and includes a blog section where I write about my life as a developer. I focused on simplicity and high performance, maintaining a 100 Lighthouse score. I utilized Netlify's functionalities to keep the website as simple as possible.",
   "title": "Portfolio Website",
   "image2000": "/uploads/portfolio-website-2000w.avif",
   "image400": "/uploads/portfolio-website-400w.avif",
