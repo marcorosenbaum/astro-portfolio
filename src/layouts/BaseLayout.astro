@@ -1,7 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import SideBar from '@/components/SideBar.astro';
+// import SideBar from '@/components/SideBar.astro';
 import ContactForm from '@/components/ContactForm.tsx';
 import '@fontsource-variable/league-spartan';
 import '../styles/global.css';
@@ -28,7 +28,7 @@ const { pageTitle, pageDescription } = Astro.props;
   <div class="body-wrapper px-4 sm:px-16 md:px-24 lg:px-32 min-h-screen">
     <ContactForm />
     <Header />
-    <SideBar />
+    <!-- <SideBar /> -->
     <slot />
   </div>
   <Footer />
