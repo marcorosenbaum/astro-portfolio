@@ -4,7 +4,10 @@ import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout
+  pageTitel={frontmatter.title}
+  pageDescription={frontmatter.description}
+>
   <section class="py-32">
     <div class="max-w-[40rem] text-justify flex flex-col gap-4 mx-auto">
       <div class="tags flex gap-4">
