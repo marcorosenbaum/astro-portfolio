@@ -1,13 +1,12 @@
 ---
 const { title, url, description, pubDate } = Astro.props;
-// const trimmedPubDate = pubDate.substring(0, 10);
 ---
 
 <li>
   <a
     href={url}
     aria-label="Navigate to blog post"
-    class="flex gap-12 border border-accent-color rounded-xl p-4 bg-black/20"
+    class="flex gap-12 border border-accent-color rounded-xl p-4 bg-gray-100 dark:bg-black/30"
   >
     <div class="flex flex-col gap-4">
       <p class="text-2xl font-bold">{title}</p>
