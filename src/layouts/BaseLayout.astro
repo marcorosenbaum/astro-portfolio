@@ -11,6 +11,20 @@ const { pageTitle, pageDescription } = Astro.props;
 
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MPPH5WC3');
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -25,17 +39,26 @@ const { pageTitle, pageDescription } = Astro.props;
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
   </head>
-  <div class="body-wrapper px-4 sm:px-16 md:px-24 lg:px-32 min-h-screen">
-    <Header />
-    <slot />
-    <SideBar />
-    <ContactForm />
-  </div>
-  <Footer />
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MPPH5WC3"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="body-wrapper px-4 sm:px-16 md:px-24 lg:px-32 min-h-screen">
+      <Header />
+      <slot />
+      <SideBar />
+      <ContactForm />
+    </div>
+    <Footer />
+  </body>
   <script>
     import '../scripts/menu.js';
     import '../scripts/contact-form.js';
   </script>
-
-
 </html>
