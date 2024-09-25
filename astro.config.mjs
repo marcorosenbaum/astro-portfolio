@@ -6,20 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://marcorosenbaum.com',
-  integrations: [
-    react(),
-    tailwind(),
-    icon(),
-    sitemap({
-      filter: (page) => !page.includes('/exclude-this-page'),
-      serialize: (page) => {
-        return {
-          url: page,
-          lastmod: new Date().toISOString(),
-        };
-      },
-    }),
-  ],
+  integrations: [react(), tailwind(), icon(), sitemap()],
   devToolbar: {
     enabled: false,
   },
