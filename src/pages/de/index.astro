@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import photoMarco400w from 'public/uploads/photo-marco-400w.webp';
+import photoMarco600w from 'public/uploads/photo-marco-600w.webp';
+import photoMarco800w from 'public/uploads/photo-marco-800w.webp';
+import photoMarco1000w from 'public/uploads/photo-marco-1000w.webp';
+import photoMarco1200w from 'public/uploads/photo-marco-1200w.webp';
+import photoMarco1600w from 'public/uploads/photo-marco-1600w.webp';
+import photoMarco2000w from 'public/uploads/photo-marco-2000w.webp';
+
+import TypewriterText from '../../components/TypewriterText/TypewriterText.tsx';
+import Skills from '@/components/Skills';
+import ChevronDown from '@/components/ChevronDown.tsx';
+
+const pageTitle = 'Marco Rosenbaum';
+const pageDescription =
+  'Marco Rosenbaum - Web Entwickler und Übersetzer in Stockholm';
+---
+
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
+  <section class="flex flex-col h-screen pt-16 gap-12 justify-between">
+    <div class="flex flex-col flex-grow lg:flex-row justify-around">
+      <div class="start-text flex flex-col justify-center flex-grow gap-12">
+        <h1 class="sm:text-4xl md:text-5xl lg:text-6xl">
+          Ich bin Marco,
+          <br />
+          <TypewriterText
+            client:load
+            words={['ein Web Entwickler.', 'ein Übersetzer.', 'ein Optimist.']}
+          />
+        </h1>
+        <h1 class="sm:text-4xl md:text-4xl lg:text-5xl dark:text-accent-color">
+          Ich mache deine Vision zur Wirklichkeit, mit&nbsp;Code.
+        </h1>
+      </div>
+      <div class="max-h-[40vh] lg:max-w-[35vw] lg:max-h-[80vh]">
+        <img
+          class="mx-auto text-center h-full w-full object-contain"
+          srcset={`
+            ${photoMarco400w.src} 412w,
+            ${photoMarco600w.src} 600w,
+            ${photoMarco800w.src} 800w,
+            ${photoMarco1000w.src} 1000w,
+            ${photoMarco1200w.src} 1200w,
+            ${photoMarco1600w.src} 1600w,
+            ${photoMarco2000w.src} 2000w,
+          `}
+          sizes="
+          (max-width: 1023px) 100vw, 
+          (min-width: 1024px) 35vw"
+          width="1000"
+          height="961"
+          alt="Photo of Marco Rosenbaum"
+        />
+      </div>
+    </div>
+
+    <ChevronDown client:load />
+  </section>
+
+  <section class="min-h-screen flex flex-col justify-around py-16 gap-16">
+    <div class="text-xl flex flex-col gap-8">
+      <p>I am a Web Developer based in beautiful Stockholm.</p>
+      <p>
+        Programming has always been a part of my job, but I discovered my true
+        passion in web development. I like the creative process of building
+        something from nothing just by writing code and I love the personal
+        challenge of achieving maximum efficiency when solving problems.
+      </p>
+      <p>
+        I'm always eager to learn and adapt to new skills, but my current tech
+        stack includes the following:
+      </p>
+    </div>
+    <div class="relative -z-50">
+      <Skills client:visible />
+    </div>
+    <div
+      class="flex flex-col md:flex-row md:justify-around gap-12 items-center"
+    >
+      <a
+        class="py-2 px-8 rounded-full border text-center w-max bg-white hover:bg-gray-200 border-current dark:border-accent-color dark:hover:bg-transparent text-black hover:text-current duration-150"
+        href="/projects"
+        aria-label="Navigate to the projects page">What have I built?</a
+      >
+      <a
+        class="py-2 px-8 rounded-full border text-center w-max bg-white hover:bg-gray-200 border-current dark:border-accent-color dark:hover:bg-transparent text-black hover:text-current duration-150"
+        href="/blog"
+        aria-label="Navigate to the blog page">Get to know me in my blog!</a
+      >
+      <button
+        class="show-contact-form-btn py-2 px-8 rounded-full border text-center w-max bg-white hover:bg-gray-200 border-current dark:border-accent-color dark:hover:bg-transparent text-black hover:text-current duration-150"
+        aria-label="Send me a message">Contact me!</button
+      >
+    </div>
+  </section>
+</BaseLayout>

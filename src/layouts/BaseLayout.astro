@@ -39,7 +39,7 @@ const { pageTitle, pageDescription } = Astro.props;
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
   </head>
-  <body>
+  <body class="body-wrapper px-4 sm:px-16 md:px-24 lg:px-32 min-h-screen">
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -49,13 +49,17 @@ const { pageTitle, pageDescription } = Astro.props;
         style="display:none;visibility:hidden"></iframe></noscript
     >
     <!-- End Google Tag Manager (noscript) -->
-    <div class="body-wrapper px-4 sm:px-16 md:px-24 lg:px-32 min-h-screen">
-      <Header />
+
+    <Header />
+    <main>
       <slot />
-      <SideBar />
-      <ContactForm />
-    </div>
-    <Footer />
+    </main>
+    <SideBar />
+    <ContactForm />
+
+    <footer class="mx-[-1rem] sm:mx-[-4rem] md:mx-[-6rem] lg:mx-[-8rem]">
+      <Footer />
+    </footer>
   </body>
   <script>
     import '../scripts/menu.js';

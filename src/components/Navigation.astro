@@ -4,29 +4,39 @@ import MenuModal from './MenuModal.astro';
 ---
 
 <div>
-  <div class="gap-6 hidden md:!flex">
-    <a
-      href="/"
-      class=`${currentUrl=== "/"? "border-b border-accent-color": ""} flex gap-2`
-      aria-label="Navigate to the home page">Home</a
-    >
+  <nav>
+    <ul class="gap-6 hidden md:!flex">
+      <li>
+        <a
+          href="/"
+          class=`${currentUrl=== "/"? "border-b border-accent-color": ""} flex gap-2`
+          aria-label="Navigate to the home page">Home</a
+        >
+      </li>
 
-    <a
-      href="/projects"
-      class=`${currentUrl=== "/projects/"? "border-b border-accent-color": ""} flex gap-2`
-      aria-label="Navigate to the Projects page">Projects</a
-    >
-    <a
-      href="/blog"
-      class=`${currentUrl=== "/blog/"? "border-b border-accent-color": ""} flex gap-2`
-      aria-label="Navigate to the blog page">Blog</a
-    >
-    <a
-      href="/tags/"
-      class=`${currentUrl=== "/tags/"? "border-b border-accent-color": ""} flex gap-2`
-      aria-label="Navigate to the tags page">Tags</a
-    >
-  </div>
+      <li>
+        <a
+          href="/projects"
+          class=`${currentUrl=== "/projects/"? "border-b border-accent-color": ""} flex gap-2`
+          aria-label="Navigate to the Projects page">Projects</a
+        >
+      </li>
+      <li>
+        <a
+          href="/blog"
+          class=`${currentUrl=== "/blog/"? "border-b border-accent-color": ""} flex gap-2`
+          aria-label="Navigate to the blog page">Blog</a
+        >
+      </li>
+      <li>
+        <a
+          href="/tags/"
+          class=`${currentUrl=== "/tags/"? "border-b border-accent-color": ""} flex gap-2`
+          aria-label="Navigate to the tags page">Tags</a
+        >
+      </li>
+    </ul>
+  </nav>
   <button
     aria-label="Open the menu"
     class="flex md:!hidden"
