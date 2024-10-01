@@ -25,7 +25,7 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle={tag} pageDescription=`Blog posts tagged with ${tag}`>
-  <section class="py-32">
+  <section class="py-32 min-h-screen">
     <h2 class="pb-16">Blog posts tagged with "{tag}" :</h2>
     <ul class="flex flex-col gap-12">
       {

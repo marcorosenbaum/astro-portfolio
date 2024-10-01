@@ -7,16 +7,18 @@ const pageDescription = 'All tags used in blog posts on this site.';
 ---
 
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
-  <h2 class="pt-32 pb-16">Blog post tags</h2>
-  <div class="flex flex-wrap gap-4">
-    {
-      tags.map((tag) => (
-        <a href={`/tags/${tag}`}>
-          <p class=" bg-white border border-black text-black px-4 py-1 rounded-xl hover:bg-gray-200 duration-300">
-            {tag}
-          </p>
-        </a>
-      ))
-    }
-  </div>
+  <section class="min-h-screen">
+    <h2 class="pt-32 pb-16">Blog post tags</h2>
+    <div class="flex flex-wrap gap-4">
+      {
+        tags.map((tag) => (
+          <a href={`/tags/${tag}`}>
+            <p class=" bg-white border border-black text-black px-4 py-1 rounded-xl hover:bg-gray-200 duration-300">
+              {tag}
+            </p>
+          </a>
+        ))
+      }
+    </div>
+  </section>
 </BaseLayout>
